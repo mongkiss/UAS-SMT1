@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Welcoming Header -->
+      <header class="welcome-header">
+        <h1>Welcome to MyPortofolio</h1>
+        <p>Programmer/Editor/Freelancer</p>
+      </header>
+
+      <!-- Navigation Buttons -->
+      <nav class="tab-nav">
+        <button class="tab-button active" data-target="profile">Profile</button>
+        <button class="tab-button" data-target="projects">Projects</button>
+        <button class="tab-button" data-target="gallery">Gallery</button>
+        <button class="tab-button" data-target="contact">Contact</button>
+      </nav>
+
+      <!-- Content Area -->
+      <main class="content-area">
+        <!-- Profile Section -->
+        <section id="profile" class="tab-content active-content">
+          <h2>About Me</h2>
+          <div class="profile-content">
+            <img src="IMAGE/Professional.png" alt="Profile Picture" />
+            <div>
+              <p>
+                Hello! Saya <strong>Muhammad Amien Nurcahya</strong>, seorang
+                Mahasiswa di Universitas Pamulang. Saya berasal dari Jakarta
+                Selatan. Lulusan tahun 2025 dari SMA Waskito. Saya merupakan
+                seorang programmer yang cukup menguasai bagian <i>frontend</i>
+                Membuat beberapa project dan lain-lain</br>
+              </p>
+              <ul>
+                <h3>Skills</h3>
+                <li>HTML5 & CSS3</li>
+                <li>JavaScript (ES6+)</li>
+                <li>React.js</li>
+                <li>Node.js & Express</li>
+                <li>UI/UX Design</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+<!-- PROJECT -->
+        <section id="projects" class="tab-content">
+          <h2>My Projects</h2>
+          <div class="project-grid">
+            <div class="project-card">
+              <img
+                src="IMAGE/PORJECT 1.png"
+                alt="Project 1"
+              />
+              <h3>Web Music Player</h3>
+              <p>A fully functional music player design for web usage.</p>
+            </div>
+            <div class="project-card">
+              <img
+                src="https://via.placeholder.com/400x250.png?text=Project+2"
+                alt="Project 2"
+              />
+              <h3>Task Management App</h3>
+              <p>
+                A sleek and intuitive app for managing daily tasks and projects.
+              </p>
+            </div>
+            <div class="project-card">
+              <img
+                src="https://via.placeholder.com/400x250.png?text=Project+3"
+                alt="Project 3"
+              />
+              <h3>Weather Dashboard</h3>
+              <p>
+                A real-time weather dashboard that displays forecasts for any
+                city.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="tab-content">
+          <h2>Gallery</h2>
+          <div class="gallery-grid">
+            <img
+              src="IMAGE/IMG-20230207-WA0009.jpg"
+              alt="Gallery Image 1"
+            />
+            <img
+              src="IMAGE/IMG-20230430-WA0023.jpg"
+              alt="Gallery Image 2"
+            />
+            <img
+              src="IMAGE/IMG-20241122-WA0033.jpg"
+              alt="Gallery Image 3"
+            />
+            <img
+              src="IMAGE/IMG-20250621-WA0317.jpg"
+              alt="Gallery Image 4"
+            />
+            <img
+              src="IMAGE/IMG-20250621-WA0389.jpg"
+              alt="Gallery Image 5"
+            />
+            <img
+              src="IMAGE/Graduation With MaBRO.jpg"
+              alt="Gallery Image 6"
+            />
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="tab-content">
+          <h2>Contact Me</h2>
+          <form class="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
