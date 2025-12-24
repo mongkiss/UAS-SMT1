@@ -29,3 +29,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+const hamburger = document.querySelector(".hamburger");
+const tabNav = document.querySelector(".tab-nav");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  tabNav.classList.toggle("open");
+});
+
+// Close menu after clicking a tab (mobile)
+document.querySelectorAll(".tab-button").forEach((button) => {
+  button.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    tabNav.classList.remove("open");
+  });
+});
