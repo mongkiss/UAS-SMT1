@@ -134,7 +134,7 @@ body {
   height: 18rem;
   border-radius: 50%;
   object-fit: scale-down;
-  border: 5px solid rgb(red, green, blue);
+  border: 5px solid #ffffff;
   justify-content: center;
   align-items: center;
 }
@@ -249,4 +249,118 @@ body {
 
 .contact-form button:hover {
   background-color: #ff0000;
+}
+
+@media (max-width: 768px) {
+  /* Container spacing */
+  .container {
+    padding: 15px;
+  }
+
+  /* Header text scaling */
+  .welcome-header {
+    padding: 40px 15px;
+  }
+
+  .welcome-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .welcome-header p {
+    font-size: 1rem;
+  }
+
+  /* Tabs become easier to tap */
+  .tab-nav {
+    gap: 8px;
+  }
+
+  .tab-button {
+    flex: 1;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  /* Content padding */
+  .content-area {
+    padding: 25px 20px;
+  }
+
+  /* Profile section stacks vertically */
+  .profile-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-content img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .profile-content ul {
+    margin-top: 20px;
+  }
+
+  /* Project cards spacing */
+  .project-card img {
+    height: 180px;
+  }
+
+  /* Gallery images smaller */
+  .gallery-grid img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .tab-button {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  width: 30px;
+  cursor: pointer;
+  margin: 0 auto 20px;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background-color: #000;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .tab-nav {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tab-nav.open {
+    display: flex;
+  }
+
+  .tab-button {
+    width: 100%;
+    border-radius: 10px;
+  }
 }
