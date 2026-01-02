@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>MongPortfolio</title>    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,12 +14,23 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <!-- Welcoming Header -->
+
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <h1>MONGPORTFOLIO</h1>
+        <button id="enter-btn" class="enter-btn">ENTER PORTFOLIO</button>
+      </div>
+    </section>
+
+    <div id="portfolio-wrapper">
+      
+      <div class="container">
       <header class="welcome-header">
-        <h1>MongPortofolio</h1>
+        <h1>Welcome to MyPortfolio</h1>
         <p>Programmer/Editor/Freelancer</p>
       </header>
 
@@ -30,7 +40,6 @@
         <span></span>
     </div>
 
-      <!-- Navigation Buttons -->
       <nav class="tab-nav">
         <button class="tab-button active" data-target="profile">Profile</button>
         <button class="tab-button" data-target="projects">Projects</button>
@@ -38,9 +47,7 @@
         <button class="tab-button" data-target="contact">Contact</button>
       </nav>
 
-      <!-- Content Area -->
       <main class="content-area">
-        <!-- Profile Section -->
         <section id="profile" class="tab-content active-content">
           <h2>About Me</h2>
           <div class="profile-content">
@@ -65,7 +72,6 @@
           </div>
         </section>
 
-<!-- PROJECT -->
         <section id="projects" class="tab-content">
           <h2 align="center">My Projects</h2>
           <div class="project-grid">
@@ -103,7 +109,6 @@
           </div>
         </section>
 
-        <!-- Gallery Section -->
         <section id="gallery" class="tab-content">
           <h2 align="center">Gallery</h2>
           <div class="gallery-grid">
@@ -140,7 +145,6 @@
           </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="tab-content">
           <h2 align="center">Contact Me</h2>
           <div class="contact-info">
@@ -170,8 +174,11 @@
           </form>
         </section>
       </main>
-    </div>
+    </div>      
+   </div>
+</div>
 
+    <!-- Link to your External JS -->
     <script src="script.js"></script>
   </body>
 </html>
