@@ -1,4 +1,106 @@
-/* --- Global Styles & Variables --- */
+/* --- GLOBAL SETTINGS --- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+  color: #ffffff;
+}
+
+.bg-anim-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+
+  background-image: url("IMAGE/Warhammer\ 40K.jpg");
+  background-size: 120% 120%;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: driftBackground 60s linear infinite alternate;
+}
+
+/* Dark overlay to ensure text readability */
+.bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.65);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+}
+
+@keyframes driftBackground {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    transform: scale(1.05) translate(-2%, -2%);
+  }
+}
+
+.hero-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  position: relative;
+}
+
+.hero-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  color: #000000;
+  font-family: "abduction2002", sans-serif;
+  text-shadow: 0px 2px 5px rgba(255, 255, 255, 0.9);
+}
+
+.enter-btn {
+  padding: 15px 40px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.enter-btn:hover {
+  background-color: #000000;
+  color: white;
+  transform: scale(1.05);
+}
+
+#portfolio-wrapper {
+  min-height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding-top: 40px;
+}
+
 :root {
   --primary-color: #000000;
   --secondary-color: #f8f9fa;
@@ -128,15 +230,15 @@ body {
   padding: 40px;
   border-radius: 15px;
   box-shadow: var(--shadow);
-  min-height: 500px; /* Ensure consistent height */
+  min-height: 500px;
 }
 
 .tab-content {
-  display: none; /* Hide all content sections by default */
+  display: none;
 }
 
 .tab-content.active-content {
-  display: block; /* Show the active content section */
+  display: block;
   animation: fadeIn 0.5s ease-in-out;
 }
 
@@ -309,12 +411,10 @@ body {
 }
 
 @media (max-width: 768px) {
-  /* Container spacing */
   .container {
     padding: 15px;
   }
 
-  /* Header text scaling */
   .welcome-header {
     padding: 40px 15px;
   }
@@ -327,7 +427,6 @@ body {
     font-size: 1rem;
   }
 
-  /* Tabs become easier to tap */
   .tab-nav {
     gap: 8px;
   }
@@ -338,12 +437,10 @@ body {
     font-size: 0.9rem;
   }
 
-  /* Content padding */
   .content-area {
     padding: 25px 20px;
   }
 
-  /* Profile section stacks vertically */
   .profile-content {
     flex-direction: column;
     text-align: center;
@@ -358,12 +455,10 @@ body {
     margin-top: 20px;
   }
 
-  /* Project cards spacing */
   .project-card img {
     height: 180px;
   }
 
-  /* Gallery images smaller */
   .gallery-grid img {
     height: 200px;
   }
